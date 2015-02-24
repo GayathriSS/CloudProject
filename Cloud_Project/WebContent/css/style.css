@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+#Fotenote {
+	position: fixed;
+	height: 30px;
+	background-color: black;
+	bottom: 0px;
+	width:100%;
+	color:white;
+}
+.body{
+	background-color:	F0FFFF	;
+}
+.container{
+	width: 900px;
+	margin-left: 300px;
+}

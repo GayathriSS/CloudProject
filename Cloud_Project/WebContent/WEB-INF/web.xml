@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="WebApp_ID" version="3.0" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name>Cloud_Project_OLD</display-name>
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>servlets.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/index.jsp</url-pattern>
+		<url-pattern>/loginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>requestHandler</servlet-name>
+		<servlet-class>org.sampleapp.RequestHandler</servlet-class>
+		<init-param>
+          <param-name>DataContractVersion</param-name>
+          <param-value>api-version=2013-11-08</param-value>
+      </init-param>
+      <init-param>
+          <param-name>TenantContextId</param-name>
+          <param-value>test7786.onmicrosoft.com</param-value>
+      </init-param>
+      <init-param>
+          <param-name>TenantDomainName</param-name>
+          <param-value>test7786.onmicrosoft.com</param-value>
+      </init-param>
+      <init-param>
+          <param-name>ProtectedResourcePrincipalId</param-name>
+          <param-value>00000002-0000-0000-c000-000000000000</param-value>
+      </init-param>
+		<init-param>
+          <param-name>ProtectedResourceHostName</param-name>
+          <param-value>graph.windows.net</param-value>
+      </init-param>
+            
+      <init-param>
+          <param-name>RestServiceHost</param-name>
+          <param-value>graph.windows.net</param-value>
+     </init-param>
+	<init-param>
+          <param-name>SymmetricKey</param-name>
+          <param-value>avqAF4HwhXDupXOEZUP191y/YPkMMOptc/5YrCNlNgM=</param-value>  
+      </init-param>
+  
+
+  	  <init-param>
+          <param-name>AppPrincipalId</param-name>
+          <param-value>53e59ba1-7244-4333-a87c-bc7501d48e13</param-value> 
+      </init-param>
+      
+      <init-param>
+          <param-name>EvoStsUrl</param-name>
+        <param-value>https://login.windows.net/%s/oauth2/token?api-version=1.0</param-value> 
+      </init-param>
+      <init-param>
+          <param-name>AcsPrincipalId</param-name>
+          <param-value>00000001-0000-0000-c000-000000000000</param-value>
+      </init-param>
+            
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>requestHandler</servlet-name>
+		<url-pattern>/requestHandler</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>create</servlet-name>
+		<servlet-class>servlets.NewRobotServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>create</servlet-name>
+		<url-pattern>/newRobot</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Edit</servlet-name>
+		<servlet-class>servlets.EditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Edit</servlet-name>
+		<url-pattern>/editservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>createpackage</servlet-name>
+		<servlet-class>com.servlets.createpackageservlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>createpackage</servlet-name>
+		<url-pattern>/createpackage</url-pattern>
+	</servlet-mapping>	
+	
+	
+	
+	<servlet>
+		<servlet-name>editHierarchyMap</servlet-name>
+		<servlet-class>com.servlets.EditHierarchyMapServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>editHierarchyMap</servlet-name>
+		<url-pattern>/editHierarchyMap</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>getDomain</servlet-name>
+		<servlet-class>com.servlets.GetDomain</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    <servlet-name>getDomain</servlet-name>
+    <url-pattern>/getDomain</url-pattern>
+  </servlet-mapping>
+	
+	<servlet>
+    <servlet-name>getRole</servlet-name>
+    <servlet-class> com.servlets.getroleid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getRole</servlet-name>
+    <url-pattern>/getRole</url-pattern>
+  </servlet-mapping>
+
+	
+	
+	<servlet>
+		<servlet-name>View</servlet-name>
+		<servlet-class>servlets.ViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>View</servlet-name>
+		<url-pattern>/viewservlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>getUsers</servlet-name>
+		<servlet-class>servlets.GetUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>getUsers</servlet-name>
+		<url-pattern>/getUsers</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	 <servlet-name>UpdateInterTenant</servlet-name>
+    <servlet-class> com.servlets.UpdateInterTenant</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateInterTenant</servlet-name>
+    <url-pattern>/UpdateInterTenant</url-pattern>
+  </servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>saveHierarchy</servlet-name>
+		<servlet-class>servlets.saveHierarchyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>saveHierarchy</servlet-name>
+		<url-pattern>/saveHierarchy</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>SaveAsRobot</servlet-name>
+		<servlet-class>servlets.SaveAsRobotServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SaveAsRobot</servlet-name>
+		<url-pattern>/SaveAsRobot</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>save</servlet-name>
+		<servlet-class>servlets.SaveRobotServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>save</servlet-name>
+		<url-pattern>/saveRobot</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditRobot</servlet-name>
+		<servlet-class>servlets.EditRobotServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditRobot</servlet-name>
+		<url-pattern>/editRobotCode</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UpdateRobot</servlet-name>
+		<servlet-class>servlets.UpdateRobotServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateRobot</servlet-name>
+		<url-pattern>/updateRobot</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>jersey-servlet</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>ServerService</param-value>
+		</init-param>
+		<init-param>
+			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jersey-servlet</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>servlets.RegistrationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/registrationservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>domain</servlet-name>
+		<servlet-class>servlets.CreatedomainServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>domain</servlet-name>
+		<url-pattern>/createdomain</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>playBattle</servlet-name>
+		<servlet-class>servlets.PlayBattleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>playBattle</servlet-name>
+		<url-pattern>/playBattle</url-pattern>
+	</servlet-mapping>
+	
+
+  
+		<servlet>
+		<servlet-name>scoreUpdate</servlet-name>
+		<servlet-class>servlets.scoreUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>scoreUpdate</servlet-name>
+		<url-pattern>/scoreUpdate</url-pattern>
+	</servlet-mapping>
+  
+<servlet>
+		<servlet-name>saveSettings</servlet-name>
+		<servlet-class>servlets.saveSettingsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>saveSettings</servlet-name>
+		<url-pattern>/saveSettings</url-pattern>
+	</servlet-mapping>
+  
+	
+	
+	<servlet>
+    <servlet-name>Hierarchy_role</servlet-name>
+    <servlet-class> com.servlets.Hierarchy</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hierarchy_role</servlet-name>
+    <url-pattern>/Hierarchyrole</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Hierarchy_Edit</servlet-name>
+    <servlet-class> com.servlets.HierarchyEdit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hierarchy_Edit</servlet-name>
+    <url-pattern>/Hierarchyedit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Hierarchy_Edit1</servlet-name>
+    <servlet-class> com.servlets.HierarchyEdit1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hierarchy_Edit1</servlet-name>
+    <url-pattern>/Hierarchyedit1</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>Hierarchy_Edit2</servlet-name>
+    <servlet-class> com.servlets.HierarchyEdit2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hierarchy_Edit2</servlet-name>
+    <url-pattern>/Hierarchyedit2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>H_role</servlet-name>
+    <servlet-class> com.servlets.NewHierarchy</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>H_role</servlet-name>
+    <url-pattern>/Hrole</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HP_Create</servlet-name>
+    <servlet-class> com.servlets.HPermcreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HP_Create</servlet-name>
+    <url-pattern>/HPcreate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HP_Edit</servlet-name>
+    <servlet-class> com.servlets.HPermEdit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HP_Edit</servlet-name>
+    <url-pattern>/HPedit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HP_Edit1</servlet-name>
+    <servlet-class> com.servlets.HPermEdit1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HP_Edit1</servlet-name>
+    <url-pattern>/HPedit1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HP_Edit2</servlet-name>
+    <servlet-class> com.servlets.HPermEdit2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HP_Edit2</servlet-name>
+    <url-pattern>/HPedit2</url-pattern>
+  </servlet-mapping>
+	
+  
+</web-app>
